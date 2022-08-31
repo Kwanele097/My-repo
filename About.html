@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A about me</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,600');
+
+*{
+	margin: 0px;
+	font-family: 'Raleway', sans-serif;
+}
+#page{
+border : 1px solid black;
+height: 975px;
+width : 575px;
+margin : 0 auto ;
+box-shadow: 5px 5px 5px rgb(88, 50, 50);
+}
+
+#imageCircle{
+
+	border:6px solid white;
+	height: 250px;
+	width: 250px;
+	border-radius: 100%;
+	margin: 0px auto;
+	background-image: url('i.jpg')
+   
+
+	
+}
+
+
+#imageCircle:hover{
+	border:0px solid #6d695c;
+}
+
+#sidebar{
+	position: absolute;
+	height : 1000px;
+	width: 224px;
+	float : left;
+	background-color: #141411;
+	background-image:
+	repeating-linear-gradient(120deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	repeating-linear-gradient(60deg, rgba(255,255,255,.1), rgba(255,255,255,.1) 1px, transparent 1px, transparent 60px),
+	linear-gradient(60deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1)),
+	linear-gradient(120deg, rgba(0,0,0,.1) 25%, transparent 25%, transparent 75%, rgba(0,0,0,.1) 75%, rgba(0,0,0,.1));
+	background-size: 500px 500px;
+}
+#nameDetails{
+	margin: -10px auto;
+}
+#name{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	color : white;
+	line-height: 50px;	
+	font-size: 50px;
+}
+#profile{
+	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	color : white;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+#contact{
+position: relative;
+top:35px;
+margin: auto 20px;
+width: 220px;
+height: 100px;
+font-family: 'Raleway', sans-serif;
+}
+/*
+#contact .phone{
+margin: 10px auto;
+
+}*/
+
+#contact .phone span:nth-child(1){
+} 
+#contact .phone span:nth-child(2){
+margin: auto 15px;
+} 
+#contact .email span:nth-child(1){
+} 
+#contact .email span:nth-child(2){
+margin: auto 15px;
+} 
+
+#profileOverview{
+	text-align: center;
+	margin:15px auto;
+	width: 220px;
+	height: 200px;
+	color: white;
+	font-size: 25px;
+}
+#profileOverview span:nth-child(2){
+	margin: auto 20px;
+}
+#profileOverview p{
+	margin: 10px 20px;
+	text-align: left;
+	font-size: 16px;
+}
+#skillSet{
+	text-align: center;
+	margin:15px auto;
+	width: 220px;
+	height: 250px;
+	color: #f5f9fa;
+	font-size: 25px;
+}
+#skillSet span:nth-child(2){
+	margin: auto 20px;
+}
+
+#skillSet ul{
+margin: 15px auto;
+line-height: 20px;
+font-size: 16px;
+text-align: left;
+list-style: none;	
+}
+
+#mbody{
+	height: 875px;
+	width: 367px;
+	float:right;
+	position: relative;
+}
+
+.education{
+	position: relative;
+	margin : 10px 20px;
+	font-size: 30px;
+	width: 350px;
+}
+
+.education .title{
+	width: 350px;
+
+}
+.education span:nth-child(2){
+	margin: auto 15px;
+}
+
+.education .timeline{
+	position: relative;
+	margin:5px 5px;	
+}
+
+.education .timeline .line{
+	position: absolute;
+	height: 210px;
+	border-left: 3px solid #6d695c;;
+	margin : auto 10px;	
+}
+
+.education .eduDetails{
+	position: absolute;
+	margin: auto 40px;
+	float: left;
+	height: 230px;
+	width: 250px;
+
+}
+.education .timeline .eduDetails .eduTitle{
+	margin: 10px auto;
+	font-size:14px;
+}
+
+.eduTitle ul{
+	list-style: none;	
+	margin: auto -30px;
+}
+.eduTitle .circle{
+	position: absolute;
+	margin: auto -38px;
+	background-color: white;	
+	height: 20px;
+	width: 20px;
+	border:3px solid black;
+	border-radius: 50%;
+}
+
+.eduTitle li:nth-child(1) span{
+	font-weight: bold;
+}
+
+.eduTitle li:nth-child(2) span{
+	color:#6d695c;
+	font-weight: bold;
+}
+.BE li:nth-child(3) span{
+	font-weight: bold;
+}
+
+.experience{
+	margin: 250px 20px;
+}
+.experience .timeline .line{
+	height: 70px;
+}
+
+.certifications{
+	margin : -160px 20px;
+}
+.certifications .timeline .line{
+	height: 120px;
+}
+.links{
+	margin: 300px 20px;
+}
+.links .timeline .line{
+	height: 140px;
+}
+
+.eduTitle:hover .circle{
+
+background-color: black;
+
+}
+    </style>
+    <style>
+        .navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(29, 39, 83);
+    color:white;
+   
+  }
+  .navbar-links ul{
+margin:0; padding: 0;
+display: flex;
+  }
+  .navbar-links li{
+    list-style: none;
+  }
+  .navbar-links li a{
+    text-decoration:none;
+    display: block;
+    color: white;
+    padding: 1rem;
+   margin:10px 10px 10px 5px;
+   text-align: right;
+     }
+    </style>
+     <style> 
+		/*body{ background-image: url("h.webp") ;
+			  background-repeat: no-repeat;
+			  background-size: cover;
+		}*/
+		</style>
+</head>
+<body>
+	<h1 style="text-align:center">About<br/></h1>
+    <nav class="navbar">
+        <div class="navbar-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+			<li><a href="skills.html">Skills</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="Testimonial.html">Testimonials</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+    <html>
+<head>
+	<title>Resume | CSS</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div id="page">
+	<div id="sidebar">
+			<div id="imageCircle">
+			</div>
+			<div id="nameDetails">
+				<div id="name"><span>Kwanele</span> <span>Mbusi</span></div>
+				<div style="width:180px;margin: auto;"><hr size="2px"></div>
+				<div id="profile"><span>Developer</span></div>
+			</div>
+			<div id="contact">
+				<div class="phone"> 
+				<span class="glyphicon glyphicon-earphone" style="color:white;zoom:1.5;"></span><span style="color:white;text-align: right;">0810628663</span>
+				</div>
+				<div class="email">
+					<span class="glyphicon glyphicon-envelope" style="color:white;zoom:1.5;"></span><span style="color:white;">kwanele097@gmail.com</span>
+				</div>
+			</div>
+			<div id="profileOverview">
+				<span class="glyphicon glyphicon-user"></span> <span> Profile</span>
+				<p>I am a UI developer with around 2 years of Experience. I have worked on some really good projects that includes SAP Monitoring Portal.</p>
+         
+			</div>
+			<div id="skillSet">
+				<span class="glyphicon glyphicon-tags"></span> <span> Personal Details</span>
+				<ul>
+					<li>Age: 25</li>
+					<li>Address: Butterworth 4960</li>
+					<li>Drivers licence: C1</li>
+					<li>Disability : Normal</li>
+					<li>Languages: IsiXhosa & English FAL</li>
+				</ul>
+				
+			</div>
+
+	</div>
+	<div id="mbody">
+				<div class="education">
+					<div class="title">
+						<span class="glyphicon glyphicon-education"></span><span>Education</span>
+					</div>
+
+					<div class="timeline">
+						<div class="line"></div>
+						<div class="eduDetails">
+							<div class="eduTitle">
+							<div class="circle"></div>
+							<ul>
+								<li><span>Advanced Diploma in ICT</span></li>
+								<li><span>Dioloma in ICT in App Dev</span></li>
+								<li><span>2018-2022| 74.96 %</span></li>
+							</ul>
+							</div>
+							<div class="eduTitle">
+							<div class="circle"></div>
+							<ul>
+								<li><span>Higher Secondary School</span></li>
+								<li><span> Matric</span></li>
+								<li><span>2015- 2017 | 76.60 %</span></li>
+							</ul>
+							</div>
+							
+					</div>
+				</div>
+
+				<div class="education experience">
+					<div class="title">
+						<span class="glyphicon glyphicon-briefcase"></span><span>Experience</span>
+					</div>
+
+					<div class="timeline">
+						<div class="line"></div>
+						<div class="eduDetails">
+							<div class="eduTitle">
+							<div class="circle"></div>
+							<ul>
+								<li><span>Education Assistent</span></li>
+								<li><span>Admin clerk</span></li>
+								<li><span>6 months</span></li>
+							</ul>
+							</div>
+						</div>
+            
+					</div>
+				</div>
+
+					<div class="education experience certifications">
+					<div class="title">
+						<span class="glyphicon glyphicon-certificate"></span><span>Certifications</span>
+					</div>
+
+					<div class="timeline">
+						<div class="line"></div>
+						<div class="eduDetails">
+							<div class="eduTitle">
+							<div class="circle"></div>
+							<ul>
+								<li><span>Introduction in Cyber Security</span></li>
+								 
+							</ul>
+							</div>
+							 
+						</div>
+
+					</div>
+				</div>
+
+				<div class="education links">
+					<div class="title">
+						<span class="glyphicon glyphicon-link"></span><span>Links</span>
+					</div>
+
+					<div class="timeline">
+						<div class="line"></div>
+						<div class="eduDetails">
+							<div class="eduTitle">
+							<div class="circle"></div>
+							<ul>
+								<li><span>CodePen</span></li>
+								<li><span>https://codepen.io/kwanele097</span></li>
+								<li><span></span></li>
+							</ul>
+							</div>
+							<div class="eduTitle">
+							<div class="circle"></div>
+							<ul>
+								<li><span>LinkedIn</span></li>
+								<li><span>LinkedIn : https://www.linkedin.com/in/kwane-mbusi</span></li>
+								<li><span></span></li>
+							</ul>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+
+	</div>
+</div>
+ </body>
+</html>
+</body>
+</html>

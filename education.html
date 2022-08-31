@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+  background: #fff;
+  font-family:sans-serif;
+  font-weight:400;
+}
+#education-timeline{
+  
+  position:relative;
+  max-width:920px;
+  width:100%;
+  margin: 0 auto;
+  
+}
+#education-timeline .timeline-start,
+#education-timeline .timeline-end{
+  display:table;
+  font-family:sans-serif;
+  font-size:18px;
+  font-weight:900;
+  text-transform:uppercase;
+  background:#F39C12;
+  padding:15px 23px;
+  color:#fff;
+  max-width:5%;
+  width:100%;
+  text-align:center;
+  margin:0 auto;   
+}
+#education-timeline .education-center-line {
+  position:absolute;
+  width:3px;
+  height:100%;
+  top:0px;
+  left:50%;
+  margin-left:-2px;
+  background:#F39C12;
+  z-index:-1;
+}
+#education-timeline .education-timeline-content{
+  padding-top:47px;
+  padding-bottom:7px;
+}
+.timeline-degree{
+  width:100%;
+  height:100%;
+  position:relative;
+  overflow:hidden;
+  margin:20px 0px;  
+ 
+}
+.timeline-degree .content-left-container,
+.timeline-degree .content-right-container{
+  max-width:45%;
+  width:100%;
+}
+.timeline-degree .content-left,
+.timeline-degree .content-right{
+  position:relative;
+  width:auto;
+  border:1px solid #ddd;
+  background-color:#fff;
+  
+  padding: 27px 27px 25px 2px;
+  }
+.timeline-degree .content-left{
+  box-shadow:0 1px 25px #F39C12 ;
+  margin-right:23px;
+}
+.timeline-degree .content-right{
+   box-shadow:0 1px 25px  #F39C12;
+  margin-left:22px;
+}
+.timeline-degree p{
+  margin: 0 0 0 60px;
+  padding: 0;
+  font-weight: 400;
+  
+  color: #000;
+  font-size: 14px;
+  line-height: 24px;
+  position: relative;
+}
+.timeline-degree  span.type{
+  position:absolute;
+  font-weight:300px;
+  font-size:30px;
+ display:table;
+  top:0px;
+  left:-80px;
+  color:#F39C12;
+  
+}
+.timeline-degree .content-left-container{
+  float:left;
+  
+}
+.timeline-degree .content-right-container{
+  float:right;
+}
+timeline-degree .content-left:before,
+timeline-degree .content-right:before{
+  position:relative;
+  top:20px;
+  font-size:23px;
+  font-family:"FontAwesome";
+  color:#000;
+}
+
+
+.timeline-degree .meta-date {
+  position: absolute;
+  top: 0;
+ left: 50%;
+  width: 62px;
+  height: 62px;
+  margin-left: -50px;
+  
+  color: #fff;
+  border-radius: 100%;
+  background: #F39C12;
+  padding:20px;
+}
+.timeline-degree .meta-date .year{
+  display: block;
+  text-align: center;
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 40px;
+}
+.education-timeline-content .timeline-degree #last{
+  padding-bottom:35px;
+  }
+
+.timeline-degree{
+  padding-bottom:20px;
+  }
+
+
+.timeline-degree .content-left{
+  right:20px;
+}
+.timeline-degree .content-right{
+  left:20px;
+}
+ .content-left-container .content-left,
+ .content-right-container .content-right
+{
+  color:#00b0bd;
+}
+ .content-left-container .content-left
+{
+  padding-left:25px;
+}
+
+.fa,.fa-chevron-right{
+    color:#F39C12 !important;
+  }
+
+/* making it responssive*/
+@media only screen and ( max-width:900px )
+{
+  #education-timeline .timeline-start,
+  #education-timeline .timeline-end{
+    margin:0;
+  }
+  #education-timeline .timeline-end{
+    margin-left:14px;
+  }
+  #education-timeline .education-center-line{
+    margin-left:0;
+    left:55px;
+  }
+  .timeline-degree .meta-date{
+    margin-left:0;
+    left:7px;
+  }
+  .timeline-degree .content-left-container,
+  .timeline-degree .content-right-container{
+    max-width:100%;
+    width:auto;
+    float:none;
+    margin-left:150px;
+    min-height:53px;
+  }
+  .timeline-degree .content-left-container{
+    margin-bottom:20px;
+  }
+  timeline-degree .content-left,
+  .timeline-degree .content-right {
+    
+    padding:10px 0px 10px 5px;
+    min-height: 65px;
+  }
+  .content-left-container .content-left{
+    padding-left:5px;
+  }
+
+  .content-right-container .content-right{
+    padding-left:5px; 
+    left:-42px;
+  }
+.fa,.fa-chevron-right{
+    display:none !important;
+  }
+  }
+@media only screen and (max-width:400px){
+  .timeline-degree p{
+    margin:0;
+  }
+  .timeline-degree .content-left-container span.type{
+    display:none;
+  }
+    .timeline-degree .content-right-container span.type{
+    display:none;
+  }
+  .timeline-degree .content-right-container,
+  .timeline-degree .content-left-container{
+    min-width:150px;
+  }
+  
+}
+    </style>
+    <style> 
+        body{ background-image: url("edd.jpg") ;
+              background-repeat: no-repeat;
+              background-size: cover;
+        }
+        </style>
+         <style>
+            .navbar{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgb(29, 39, 83);
+        color:white;
+       
+      }
+      .navbar-links ul{
+    margin:0; padding: 0;
+    display: flex;
+      }
+      .navbar-links li{
+        list-style: none;
+      }
+      .navbar-links li a{
+        text-decoration:none;
+        display: block;
+        color: white;
+        padding: 1rem;
+       margin:10px 10px 10px 5px;
+       text-align: right;
+         }
+        </style>
+        <style> 
+          body{ background-image: url("h.webp") ;
+                background-repeat: no-repeat;
+                background-size: cover;
+          }
+          </style>
+</head>
+<body>
+  <h1 style="text-align:center">Education<br/></h1>
+    <nav class="navbar">
+        <div class="navbar-links">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+          
+            <li><a href="Testimonial.html">Testimonials</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </div>
+    </nav>
+    </div>
+    
+<section id="education-timeline">
+    <div class="timeline-start">Start</div>
+    <div class="education-center-line"></div>
+    <div class="education-timeline-content">
+      
+      <div class="timeline-degree timeline-degree-left">
+        <!--degree-->
+        <div class="content-left-container">
+          <div class="content-left">
+            <span class="type">:</span>
+           <span id="arrows"> <i  class="fa fa-chevron-right " style="font-size:40px;    color:#00b0bd; position:absolute;
+             right:-30px; "></i></span>
+            <p>Did my <b>primary & junior</b> schooling in <b>Ntlebi JSS</b>, Eastern Cape
+              </p>
+          </div>
+        </div>
+        <div class="meta-date">
+          <span class="year">2001-2014</span>
+        </div>
+        </div>
+        <!--degree-->
+      <div class="timeline-degree timeline-degree-right">
+        <div class="content-right-container">
+          <div class="content-right">
+            <span class="type" >:</span>
+                      <i class="fa fa-chevron-left " style="font-size:40px;    color:#00b0bd;
+                                                            
+   position:absolute;
+       left:-30px;                                                                     "></i>
+            <p style="padding-left:10px;">Did my <b>high</b> schooling in<b> SOPHAKAMA SSS</b>, Eastern Cape
+              </p>
+          </div>
+        </div>
+        <div class="meta-date">
+          <span class="year">2015-2017</span>
+        </div>
+      </div>
+        <!--degree-->
+      <div class="timeline-degree timeline-degree-left">
+              <div class="content-left-container">
+          <div class="content-left">
+            <span class="type">:</span>
+                      <i class="fa fa-chevron-right icon" style="font-size:40px;    color:#00b0bd;
+                                                                 position:absolute;
+       right:-30px;                                                                       "></i>
+            <p>Did my <b>National Diploma(ICT)</b>  from  <b>WALTER SISULU UNIVERSITY</b>, Eastern Cape ,2021 passout
+              </p>
+          </div>
+        </div>
+        <div class="meta-date">
+          <span class="year">2018-2021</span>
+        </div>
+      </div>
+        <!--degree-->
+      <div class="timeline-degree timeline-degree-right" >
+        <div class="content-right-container" id="last">
+          <div class="content-right">
+            <span class="type">.</span>
+                      <i class="fa fa-chevron-left icon" style="font-size:40px;    color:#00b0bd;
+                                                                position:absolute;
+       left:-30px;                                                                       "></i>
+            
+            <p style="padding-left:20px;"> Did my <b>Adv in ICT in App Dev</b>  from <b>WALTER SISULU UNIVERSITY</b>>
+              </p>
+          </div>
+        </div>
+        <div class="meta-date">
+          <span class="year" >2022</span>
+        </div>
+      </div>
+        
+    </div>
+      <div class="timeline-end">End</div>
+  </section>
+    
+</body>
+</html>

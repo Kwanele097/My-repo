@@ -5,16 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyHomePage</title>
+    <style>
+        .navbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 53, 0.911);
+    color:white;
+   
+  }
+  .navbar-:hover{
+    backround: rgb(238, 234, 234);
+  }
+  .navbar-links ul{
+margin:0; padding: 0;
+display: flex;
+  }
+  .navbar-links li{
+    list-style: none;
+  }
+  .navbar-links li a{
+    text-decoration:none;
+    display: block;
+    color: white;
+    padding: 1rem;
+   margin:10px 10px 10px 5px;
+   text-align: right;
+     }
+    </style>
 <style> 
-body{ background-image: url("backround.webp") ;}
+body{ background-image: url("h.webp") ;
+      background-repeat: no-repeat;
+      background-size: cover;
+}
 </style>
+ 
 </head>
 <body> 
-     
-
-    <div>
-        <h1> Hello I am Kwanele<br/>
-         An inspiring developer</h1>
-    </div>
+    
+  <nav class="navbar">
+    <div class="navbar-links">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="Testimonial.html">Testimonials</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</div>
+</nav>
 </body>
 </html>
