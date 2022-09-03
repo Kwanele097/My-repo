@@ -1,0 +1,367 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+    --main-dark-color: #057705;
+    --main-light-color: #16db16;
+    --link-color: #20aae5;
+    --dark-element-color: #73b6e2;
+    --gray-color: #d3d3d3;
+    --success-color: #2ecc71;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial;
+}
+.top_bar {
+    width: 100%;
+    height: 5rem;
+    background-color: var(--main-dark-color);
+    border-bottom: 0.25em solid var(--main-light-color);
+    margin: 0 0 10px 0;
+    display: inline-flex;
+    position: fixed;
+    z-index: 10;
+}
+/* Search  */
+
+.search {
+    margin: 8px 0 0 16px;
+}
+
+.search #search_text_input {
+    border: thin solid #e5e5e5;
+    float: left;
+    height: 23px;
+    outline: 0;
+    width: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.button_holder {
+    background-color: #f1f1f1;
+    border: thin solid #e5e5e5;
+    cursor: pointer;
+    float: left;
+    height: 23px;
+    text-align: center;
+    width: 50px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/* Navigation icons */
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav #websitePcMenu {
+  display: flex;
+}
+
+nav #websiteMobileMenu {
+  display: none;
+  visibility: hidden;
+}
+
+nav #websitePcMenu li{
+  text-align: center;
+  margin: 0 auto;
+  padding-right: 0.5rem;
+}
+nav #websitePcMenu li a div{
+  margin-top: 0.75rem;
+}
+
+nav #websitePcMenu li a:hover div:nth-child(2){
+  margin-top: 0.25rem;
+}
+
+nav a div.mainMenuItemIcon{
+  max-height: 2.5rem;
+  overflow: hidden;
+}
+
+nav a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    z-index: 1;
+}
+
+nav a div, nav a div i {
+  transition: all 0.5s linear 0.1s;
+}
+
+nav a:hover div, nav a:hover div i {
+   color: var(--main-light-color);
+}
+
+nav a:hover div i {
+   font-size: 250%;
+}
+
+.content{
+  margin: 10rem;
+  position: absolute;
+}
+
+@media screen and (max-width: 1200px) {
+  
+  nav #websitePcMenu{
+    display: none;
+    visibility: hidden;
+  }
+  
+  nav #websiteMobileMenu{
+    display: flex;
+    visibility: visible;
+    flex-direction: column;
+    font-size: 2rem;
+  }
+  
+  nav #websiteMobileMenu .websiteMobileMenu--Item{
+    display: none;
+    visibility: hidden;
+  }
+  
+  nav #websiteMobileMenu li{
+    width: 10rem;
+  }
+  
+  nav #websiteMobileMenu--BurgerIcon{
+    color: #fff;
+    padding: 1rem;
+    background-color: var(--main-dark-color);
+  }
+  
+  nav #websiteMobileMenu--BurgerIcon i{
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+  }
+  
+  nav #websiteMobileMenu--Item{
+    background-color: var(--main-dark-color);
+    padding: 0.5rem 1rem;
+    width: 10rem;
+    float: right;
+  }
+  
+  nav #websiteMobileMenu--Icon{
+    padding: 0.5rem;
+  }
+  
+}
+    </style>
+ </head>
+ <body>
+    <div class="top_bar">
+        <div class="logo">
+          <img class="webLogo" src="https://flagship.cz/user_uploads/images/posts_id_200/forWeb/750w_400h_10.jpg" alt="logo" width="35" height="25">
+          
+        </div>
+      
+        <div class="search">
+          <form action="search.php" method="GET" name="search_form">
+            <input type="text" onkeyup="getLiveSearchUsers(this.value, 'demo_uživatel')" name="q" placeholder="Hledejte..." autocomplete="off" id="search_text_input">
+              <!-- this.value is the value of whatever is being typed. -->
+              <div class="button_holder">
+                  <img src="assets/images/searchicon.png" alt="">
+              </div>
+          </form>
+      
+          <div class="search_results">
+          </div>
+          <div class="search_results_footer_empty">
+          </div>
+        </div>
+      
+        <nav>
+          
+         <ul id="websitePcMenu">
+          <li>
+            <a href="#" class="mainMenuItems mobileInvisible">
+              <div class="mainMenuItemIcon"><i class="fas fa-user"></i></div>
+              <div>Uživatel: Demo </div>
+            </a>
+          </li>
+           
+          <li> 
+          <a href="feed.php" class="mainMenuItems mobileInvisible">
+            <div class="mainMenuItemIcon"><i class="fa fa-home fa-lg"></i></div>
+            <div class="nav-icon-mobile">Novinky</div>
+          </a>
+          </li>
+           
+          <li> 
+          <a href="project.php" class="mainMenuItems mobileInvisible">
+            <div class="mainMenuItemIcon"><i class="fas fa-frog"></i></div>
+            <div>Projekty</div>
+          </a>
+         </li>
+           
+         <li>  
+          <a href="index.php" class="mainMenuItems mobileInvisible">
+            <div class="mainMenuItemIcon"><i class="fas fa-dove"></i></div>
+            <div>Informace</div>
+          </a>
+         </li>
+           
+         <li>  
+          <a href="javascript:void(0);" onclick="getDropdownData('demo_uživatel', 'message')" class="mainMenuItems mobileInvisible"> 
+            <div class="mainMenuItemIcon"><i class="fa fa-envelope fa-lg"></i></div>
+            <div>Zprávy</div>
+            
+          </a>
+        </li>
+           
+        <li>   
+          <a href="javascript:void(0);" onclick="getDropdownData('demo_uživatel', 'notification')" class="mainMenuItems mobileInvisible">
+            <div class="mainMenuItemIcon"><i class="fas fa-eye"></i></div>
+            <div>Upozornění</div>
+        </li>   
+           
+        <li>
+          <a href="requests.php" class="mainMenuItems mobileInvisible"> 
+            <div class="mainMenuItemIcon"><i class="fa fa-users fa-lg"></i></div>
+            <div>Kontakty</div>
+          </a>
+        </li>
+           
+        <li>   
+          <a href="settings.php" class="mainMenuItems mobileInvisible"> 
+            <div class="mainMenuItemIcon"><i class="fa fa-cog fa-lg"></i></div>
+            <div>Nastavení</div>
+           </a>
+        </li>
+           
+        <li>   
+          <a href="#" class="mainMenuItems mobileInvisible">
+             <div class="mainMenuItemIcon"><i class="fas fa-question"></i></div>
+             <div>Nápověda</div>
+          </a>
+        </li>
+           
+        <li> 
+          <a href="contact.php" class="mainMenuItems mobileInvisible"> 
+            <div class="mainMenuItemIcon"><i class="far fa-comment"></i></div>
+            <div>Správce</div>
+          </a>
+        </li>
+           
+        <li>   
+          <a href="includes\handlers\logout.php" class="mainMenuItems mobileInvisible">
+             <div class="mainMenuItemIcon"> <i class="fa fa-sign-out-alt fa-lg"></i></div>
+             <div>Odejít</div>
+          </a>
+        </li>
+           
+        </ul>
+        
+        <ul id="websiteMobileMenu" class="" onclick="showMobileMenu();">
+          
+          <li class="websiteMobileMenu--BurgerIcon">
+               <span> <i class="fas fa-bars"></i></i>
+          </li> 
+          
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="#"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fas fa-user"></i> </span> 
+              <span class="websiteMobileMenu--Description">Uživatel: Demo</span>
+            </a>
+          </li>     
+      
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="#"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fa fa-home fa-lg"></i> </span> 
+              <span class="websiteMobileMenu--Description">Novinky</span>
+            </a>
+          </li> 
+       
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="#"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fas fa-frog"></i> </span> 
+              <span class="websiteMobileMenu--Description">Projekty</span>
+            </a>
+          </li>     
+      
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="#"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fas fa-dove"></i> </span> 
+              <span class="websiteMobileMenu--Description">Informace</span>
+            </a>
+          </li>  
+      
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="#"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fa fa-envelope fa-lg"></i> </span> 
+              <span class="websiteMobileMenu--Description">Zprávy</span>
+            </a>
+          </li>     
+      
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="#"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fas fa-eye"></i> </span> 
+              <span class="websiteMobileMenu--Description">Upozornění</span>
+            </a>
+          </li> 
+          
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="settings.php"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fa fa-cog fa-lg"></i> </span> 
+              <span class="websiteMobileMenu--Description">Nastavení</span>
+            </a>
+          </li> 
+      
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="#"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fas fa-question"></i> </span> 
+              <span class="websiteMobileMenu--Description">Nápověda</span>
+            </a>
+          </li> 
+      
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="contact.php"> 
+              <span class="websiteMobileMenu--Icon"> <i class="far fa-comment"></i> </span> 
+              <span class="websiteMobileMenu--Description">Správce</span>
+            </a>
+          </li> 
+      
+          <li class="websiteMobileMenu--Item" class="invisible">
+            <a href="includes\handlers\logout.php"> 
+              <span class="websiteMobileMenu--Icon"> <i class="fa fa-sign-out-alt fa-lg"></i> </span> 
+              <span class="websiteMobileMenu--Description">Odejít</span>
+            </a>
+          </li> 
+      
+        </ul>  
+        
+        </nav>
+      
+        
+        <div class="dropdown_data_window" style="height:0px; border:none;"></div>
+          <input type="hidden" id="dropdown_data_type" value="">
+        </div>
+      
+      <section class="content">
+        <h1>Lorem Ipsum </h1>
+        <p>Nějaký text sem patří.</p>
+        <p>Nějaký text sem patří.</p>
+        <p>Nějaký text sem patří.</p>
+      </section>  
+ </body>
+ </html>
